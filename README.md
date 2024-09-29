@@ -15,11 +15,11 @@ Group 2
 
 Group 3
 - Module ./compute/elb/public-alb
-- Module ./network/security-groups/nginx-node
+- Module ./network/security-groups/web-node
 - Module ./network/vpn/vpn-endpoint
 
 Group 4
-- Module ./compute/asg/nginx
+- Module ./compute/asg/web
 - Module ./network/security-groups/private-alb
 
 Group 5
