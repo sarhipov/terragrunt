@@ -36,7 +36,13 @@ Group 7
 
 #### Apply
 ```
+# Step 1: 
+cd to the account/region folder (e.g payabl/eu-central-1)
+
+# Step 2: 
 terrgurnt run-all init 
+
+# Step 3: 
 terrugrunt run-all plan
 terrugrunt run-all apply
 ```
@@ -49,3 +55,5 @@ find . -type d -name ".terragrunt-cache"
 # Delete all .terragrunt-cache folders
 find . -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;
 ```
+
+NOTE: sometime vpn-endpoint creation fails because of timeout(related to Certificate validation). To fix, re-run `terragrunt apply` 

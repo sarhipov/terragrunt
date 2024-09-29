@@ -34,13 +34,13 @@ inputs = merge(
         certificate_arn = dependency.wildcard_certificate.outputs.acm_certificate_arn
 
         forward = {
-          target_group_key = "nginx-asg"
+          target_group_key = "web-asg"
         }
       }
     }
 
     target_groups = {
-      nginx-asg = {
+      web-asg = {
         backend_protocol                  = "HTTPS"
         backend_port                      = 443
         target_type                       = "instance"

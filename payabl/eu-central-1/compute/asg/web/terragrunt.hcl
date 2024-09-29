@@ -1,4 +1,4 @@
-/// compute/asg/nginx/terragrunt.hcl
+/// compute/asg/web/terragrunt.hcl
 include "asg-common" {
   path   = find_in_parent_folders("asg.hcl")
   expose = true
@@ -23,7 +23,7 @@ inputs = merge(
 
     traffic_source_attachments = {
       public-alb = {
-        traffic_source_identifier = dependency.public-alb.outputs.target_groups.nginx-asg.arn
+        traffic_source_identifier = dependency.public-alb.outputs.target_groups.web-asg.arn
         traffic_source_type       = "elbv2"
       }
     }

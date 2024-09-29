@@ -14,6 +14,7 @@ inputs = merge(
   {
     vpc_id  = dependency.vpc.outputs.vpc_id
     subnets = dependency.vpc.outputs.private_subnets
+    internal = true
 
     # Security Group
     security_groups = [dependency.alb-sg.outputs.security_group_id]

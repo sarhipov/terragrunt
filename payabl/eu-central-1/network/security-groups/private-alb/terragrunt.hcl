@@ -9,8 +9,8 @@ include "security-groups-common" {
   expose = true
 }
 
-dependency "nginx-node-sg" {
-  config_path = "${get_terragrunt_dir()}/../nginx-node"
+dependency "web-node-sg" {
+  config_path = "${get_terragrunt_dir()}/../web-node"
 }
 
 inputs = merge(
@@ -23,8 +23,8 @@ inputs = merge(
         from_port                = 443
         to_port                  = 443
         protocol                 = "tcp"
-        description              = "Allow HTTPs from nginx nodes"
-        source_security_group_id = dependency.nginx-node-sg.outputs.security_group_id
+        description              = "Allow HTTPs from web nodes"
+        source_security_group_id = dependency.web-node-sg.outputs.security_group_id
       },
     ]
     egress_with_cidr_blocks = [

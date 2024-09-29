@@ -1,4 +1,4 @@
-/// security-groups/nginx-node/terragrunt.hcl
+/// security-groups/web-node/terragrunt.hcl
 include "root" {
   path   = find_in_parent_folders()
   expose = true
