@@ -1,6 +1,8 @@
-### Structure 
-modules and their execution order for single region: 
+### High level solution
+[![AWS HLD](AWS_HLD.png)](AWS_HLD.png)
 
+### Terragrunt project structure 
+modules and their execution order for single region:
 ```
 Group 1
 - Module ./certificates/wildcard
