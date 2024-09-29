@@ -1,4 +1,4 @@
-#rds-aurora.hcl
+/// rds-aurora.hcl
 terraform {
   source = "tfr:///terraform-aws-modules/rds-aurora/aws//?version=9.9.1"
 }

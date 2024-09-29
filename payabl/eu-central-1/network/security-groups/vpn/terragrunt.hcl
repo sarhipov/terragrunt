@@ -1,4 +1,4 @@
-/// security-groups/vpc/terragrunt.hcl
+/// security-groups/vpn/terragrunt.hcl
 include "root" {
   path   = find_in_parent_folders()
   expose = true
